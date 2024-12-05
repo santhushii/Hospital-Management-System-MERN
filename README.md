@@ -58,16 +58,11 @@ The Hospital Management System is a web application designed to streamline hospi
    npm install
    ```
 
-4. Update a `/backend/server.js` file in the backend directory and add your MongoDB connection string:
+4. Update a `/backend/server.js` & `/backend/createAdmin.js` file in the backend directory and add your MongoDB connection string:
 
    ```js
    // MongoDB connection
    mongoose.connect('<your_MongoDB_connection_string>', {
-     useNewUrlParser: true,
-     useUnifiedTopology: true,
-   })
-   .then(() => console.log('Connected to MongoDB'))
-   .catch((err) => console.error('Could not connect to MongoDB', err));
    ```
 5. To create first admin, add your details to `/backend/createAdmin.js` file in backend directory:
 
