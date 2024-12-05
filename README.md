@@ -71,21 +71,21 @@ The Hospital Management System is a web application designed to streamline hospi
    ```
 5. To create first admin, add your details to `/backend/createAdmin.js` file in backend directory:
 
-  ```js
-  const admin = new Admin({
-    firstName: "abc",
-    lastName: "xyz",
-    email: "abc@gmail.com",
-    password: "xyz123", 
-    role: "admin"
-  });
-  ```
+    ```js
+    const admin = new Admin({
+      firstName: "abc",
+      lastName: "xyz",
+      email: "abc@gmail.com",
+      password: "xyz123", 
+      role: "admin"
+    });
+    ```
 
-  Then, execute it once using:
-
-  ```bash
-  node createAdmin.js
-  ```
+    Then, execute it once using:
+  
+    ```bash
+    node createAdmin.js
+    ```
 
 ### Running the Application
 
