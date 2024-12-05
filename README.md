@@ -65,9 +65,9 @@ The Hospital Management System is a web application designed to streamline hospi
    mongoose.connect('<your_MongoDB_connection_string>', {
      useNewUrlParser: true,
      useUnifiedTopology: true,
-  })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('Could not connect to MongoDB', err));
+   })
+   .then(() => console.log('Connected to MongoDB'))
+   .catch((err) => console.error('Could not connect to MongoDB', err));
    ```
 5. To create first admin, add your details to `/backend/createAdmin.js` file in backend directory:
 
