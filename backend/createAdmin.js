@@ -2,7 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const Admin = require('./models/Admin');
 
-mongoose.connect('mongodb://localhost:27017/hms', {
+mongoose.connect('<your_MongoDB_connection_string>', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
