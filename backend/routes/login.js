@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  const { email, password, role } = req.body;z
+  const { email, password, role } = req.body;
 
   console.log('Received data:', req.body);
 
