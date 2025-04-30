@@ -1,26 +1,28 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Admin = require('./models/Admin');
+const Admin = require('./models/Admin'); // Ensure this path is correct
 
-mongoose.connect('<your_MongoDB_connection_string>', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch((err) => console.error('Could not connect to MongoDB', err));
+// MongoDB connection
+mongoose.connect('mongodb+srv://admin:admin123@hospitalcluster.4d8rms4.mongodb.net/hmsDB')
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => {
+    console.error(' Could not connect to MongoDB:', err);
+    process.exit(1);
+  });
 
+// Create admin user
 async function createAdmin() {
   const admin = new Admin({
-    firstName: "abc",
-    lastName: "xyz",
-    email: "abc@gmail.com",
-    password: "xyz123", 
+    firstName: "Santhushie",
+    lastName: "Nallaperuma",
+    email: "santhu@gmail.com",
+    password: "admin123", // Consider hashing for production
     role: "admin"
   });
 
   try {
     await admin.save();
-    console.log('Admin created successfully');
+    console.log(' Admin created successfully');
   } catch (error) {
     console.error('Error creating admin:', error);
   } finally {
