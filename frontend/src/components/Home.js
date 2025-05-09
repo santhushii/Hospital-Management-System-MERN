@@ -6,8 +6,8 @@ const Button = ({ children, primary, onClick, ...props }) => (
   <button
     className={`inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${
       primary
-        ? 'text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500'
-        : 'text-gray-700 bg-white hover:bg-gray-50 focus:ring-blue-500'
+        ? 'text-white bg-green-600 hover:bg-green-700 focus:ring-green-500'
+        : 'text-gray-700 bg-white hover:bg-gray-50 focus:ring-green-500'
     }`}
     onClick={onClick}
     {...props}
@@ -18,7 +18,7 @@ const Button = ({ children, primary, onClick, ...props }) => (
 
 const Card = ({ icon: Icon, title, description, primary }) => (
   <div className={`rounded-lg shadow-md p-6 ${primary ? 'bg-white' : 'bg-gray-100'}`}>
-    <Icon className="w-8 h-8 text-blue-600 mb-4" />
+    <Icon className="w-8 h-8 text-green-600 mb-4" />
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
     <Button primary>Explore</Button>
@@ -44,7 +44,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
       <header className="flex items-center justify-between px-6 py-4 bg-white">
         <div className="flex items-center gap-2">
-          <Hospital className="w-8 h-8 text-blue-600" />
+          <Hospital className="w-8 h-8 text-green-600" />
           <span className="text-xl font-bold">Hospital Management System</span>
         </div>
         <nav className="flex items-center gap-4">
@@ -54,7 +54,7 @@ const Home = () => {
       </header>
       
       <main className="flex-1">
-        <Section bg="bg-blue-600" height="min-h-[30rem]">
+        <Section bg="bg-green-600" height="min-h-[30rem]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-full">
             <div>
               <h1 className="text-5xl font-bold text-white mb-6 text-left">

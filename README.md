@@ -1,7 +1,7 @@
 # Hospital Management System
 
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-green.svg)](https://www.mongodb.com/)
-[![Express](https://img.shields.io/badge/Express-Framework-blue.svg)](https://expressjs.com/)
+[![Express](https://img.shields.io/badge/Express-Framework-green.svg)](https://expressjs.com/)
 [![React](https://img.shields.io/badge/React-Library-61DAFB.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-Environment-339933.svg)](https://nodejs.org/)
 

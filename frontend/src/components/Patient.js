@@ -6,10 +6,10 @@ const Button = ({ children, variant = 'primary', className = '', ...props }) => 
   <button
     className={`inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${
       variant === 'primary'
-        ? 'text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500'
+        ? 'text-white bg-green-600 hover:bg-green-700 focus:ring-green-500'
         : variant === 'outline'
-        ? 'text-blue-600 border-blue-600 hover:bg-blue-50 focus:ring-blue-500'
-        : 'text-blue-600 border-blue-600 hover:bg-blue-50 focus:ring-blue-500'
+        ? 'text-green-600 border-green-600 hover:bg-green-50 focus:ring-green-500'
+        : 'text-green-600 border-green-600 hover:bg-green-50 focus:ring-green-500'
     } ${className}`}
     {...props}
   >
@@ -27,7 +27,7 @@ const Card = ({ children, className = '' }) => (
 const CardHeader = ({ children, icon: Icon }) => (
   <div className="px-4 py-5 border-b border-gray-200 sm:px-6 flex items-center justify-between">
     {children}
-    {Icon && <Icon className="h-5 w-5 text-blue-600 ml-2" />}
+    {Icon && <Icon className="h-5 w-5 text-green-600 ml-2" />}
   </div>
 );
 
@@ -45,7 +45,7 @@ const CardFooter = ({ children }) => (
 
 const Input = ({ ...props }) => (
   <input
-    className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md px-1 h-6"
+    className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md px-1 h-6"
     {...props}
   />
 );
@@ -58,7 +58,7 @@ const Label = ({ children, htmlFor }) => (
 
 const Select = ({ children, ...props }) => (
   <select
-    className="mt-1 block w-full pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+    className="mt-1 block w-full pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
     {...props}
   >
     {children}
@@ -328,15 +328,15 @@ export default function PatientDashboard() {
           <CardContent>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-blue-600" />
+                <Clock className="h-4 w-4 text-green-600" />
                 <span>Blood test results collected</span>
               </li>
               <li className="flex items-center space-x-2">
-                <User className="h-4 w-4 text-blue-600" />
+                <User className="h-4 w-4 text-green-600" />
                 <span>Appointment with Dr. Johnson completed</span>
               </li>
               <li className="flex items-center space-x-2">
-                <FileText className="h-4 w-4 text-blue-600" />
+                <FileText className="h-4 w-4 text-green-600" />
                 <span>New prescription added</span>
               </li>
             </ul>
@@ -350,7 +350,7 @@ export default function PatientDashboard() {
             <ul className="space-y-2">
               {careTeam.map((member, index) => (
                 <li key={index} className="flex items-center space-x-2">
-                  <Users className="h-4 w-4 text-blue-600" />
+                  <Users className="h-4 w-4 text-green-600" />
                   <span>Dr. {member.firstName} {member.lastName} - {member.specialty}</span>
                 </li>
               ))}
@@ -531,20 +531,20 @@ export default function PatientDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-600">
+    <div className="min-h-screen bg-green-600">
       <header className="bg-white p-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <Hospital className="h-6 w-6 text-blue-600" />
+          <Hospital className="h-6 w-6 text-green-600" />
           <span className="font-bold text-xl">Hospital Management System</span>
         </div>
         <Button variant="outline" onClick={() => navigate('/')}>Sign Out</Button>
       </header>
-      <nav className="bg-blue-700 text-white p-4">
+      <nav className="bg-green-700 text-white p-4">
         <ul className="flex space-x-4 justify-center">
           <li>
             <Button
               variant={activeTab === 'Dashboard' ? "outline" : "ghost"}
-              className={`hover:bg-white hover:text-blue-600 ${activeTab === 'Dashboard' ? 'bg-white text-blue-600' : 'text-white'}`}
+              className={`hover:bg-white hover:text-green-600 ${activeTab === 'Dashboard' ? 'bg-white text-green-600' : 'text-white'}`}
               onClick={() => setActiveTab('Dashboard')}
             >
               <Home className="w-4 h-4 mr-2" />
@@ -554,7 +554,7 @@ export default function PatientDashboard() {
           <li>
             <Button
               variant={activeTab === 'Profile' ? "outline" : "ghost"}
-              className={`hover:bg-white hover:text-blue-600 ${activeTab === 'Profile' ? 'bg-white text-blue-600' : 'text-white'}`}
+              className={`hover:bg-white hover:text-green-600 ${activeTab === 'Profile' ? 'bg-white text-green-600' : 'text-white'}`}
               onClick={() => setActiveTab('Profile')}
             >
               <UserCircle className="w-4 h-4 mr-2" />
@@ -564,7 +564,7 @@ export default function PatientDashboard() {
           <li>
             <Button
               variant={activeTab === 'Appointment Booking' ? "outline" : "ghost"}
-              className={`hover:bg-white hover:text-blue-600 ${activeTab === 'Appointment Booking' ? 'bg-white text-blue-600' : 'text-white'}`}
+              className={`hover:bg-white hover:text-green-600 ${activeTab === 'Appointment Booking' ? 'bg-white text-green-600' : 'text-white'}`}
               onClick={() => setActiveTab('Appointment Booking')}
 
             >

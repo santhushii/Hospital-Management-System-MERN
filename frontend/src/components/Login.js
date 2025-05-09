@@ -49,20 +49,20 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-green-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
-        <div className="bg-blue-600 p-6 text-white">
+        <div className="bg-green-600 p-6 text-white">
           <h2 className="text-2xl font-bold text-center">Login to HealthCare Portal</h2>
-          <p className="text-center text-blue-100 mt-1">Access your account</p>
+          <p className="text-center text-green-100 mt-1">Access your account</p>
         </div>
         <div className="p-6">
-          <div className="flex bg-blue-100 rounded-lg p-1 mb-6">
+          <div className="flex bg-green-100 rounded-lg p-1 mb-6">
             {roles.map((role) => (
               <button
                 key={role.id}
                 onClick={() => setSelectedRole(role.id)}
                 className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-md transition-colors ${
-                  selectedRole === role.id ? 'bg-blue-600 text-white' : 'text-blue-600'
+                  selectedRole === role.id ? 'bg-green-600 text-white' : 'text-green-600'
                 }`}
               >
                 <role.icon size={16} />
@@ -81,7 +81,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -96,7 +96,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
                 <button
@@ -117,7 +117,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+              className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors"
             >
               Login as {roles.find((r) => r.id === selectedRole)?.label}
             </button>
@@ -126,7 +126,7 @@ const Login = () => {
         <div className="bg-gray-50 px-6 py-4 text-center">
           <p className="text-sm text-gray-600">
             Don't have an account?{' '}
-            <button onClick={() => navigate('/signup')} className="text-blue-600 font-semibold hover:underline">
+            <button onClick={() => navigate('/signup')} className="text-green-600 font-semibold hover:underline">
               Sign up
             </button>
           </p>

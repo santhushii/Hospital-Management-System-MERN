@@ -65,55 +65,55 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container mx-auto bg-blue-50 min-h-screen flex items-center justify-center max-w-full">
+    <div className="container mx-auto bg-green-50 min-h-screen flex items-center justify-center max-w-full">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg">
-        <div className="bg-blue-600 text-white rounded-t-lg p-6">
+        <div className="bg-green-600 text-white rounded-t-lg p-6">
           <h2 className="text-2xl font-bold text-center">Sign Up as a Patient</h2>
-          <p className="text-center text-blue-100">Create your account to access health services</p>
+          <p className="text-center text-green-100">Create your account to access health services</p>
         </div>
         <div className="p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-blue-800 text-left">First Name</label>
+                <label htmlFor="firstName" className="block text-sm font-medium text-green-800 text-left">First Name</label>
                 <input 
                   id="firstName" 
                   name="firstName" 
                   value={formData.firstName} 
                   onChange={handleChange} 
-                  className="mt-1 block w-full rounded-md border-blue-200 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50 pl-1" 
+                  className="mt-1 block w-full rounded-md border-green-200 shadow-sm focus:border-green-400 focus:ring focus:ring-green-400 focus:ring-opacity-50 pl-1" 
                   required
                 />
                 {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-blue-800 text-left">Last Name</label>
+                <label htmlFor="lastName" className="block text-sm font-medium text-green-800 text-left">Last Name</label>
                 <input 
                   id="lastName" 
                   name="lastName" 
                   value={formData.lastName} 
                   onChange={handleChange} 
-                  className="mt-1 block w-full rounded-md border-blue-200 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50 pl-1" 
+                  className="mt-1 block w-full rounded-md border-green-200 shadow-sm focus:border-green-400 focus:ring focus:ring-green-400 focus:ring-opacity-50 pl-1" 
                   required
                 />
                 {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
               </div>
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-blue-800 text-left">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-green-800 text-left">Email</label>
               <input 
                 id="email" 
                 name="email" 
                 type="email" 
                 value={formData.email} 
                 onChange={handleChange} 
-                className="mt-1 block w-full rounded-md border-blue-200 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50 pl-1" 
+                className="mt-1 block w-full rounded-md border-green-200 shadow-sm focus:border-green-400 focus:ring focus:ring-green-400 focus:ring-opacity-50 pl-1" 
                 required
               />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-blue-800 text-left">Password</label>
+              <label htmlFor="password" className="block text-sm font-medium text-green-800 text-left">Password</label>
               <div className="flex items-center">
                 <input 
                   id="password" 
@@ -121,12 +121,12 @@ const SignUp = () => {
                   type={showPassword ? 'text' : 'password'} 
                   value={formData.password} 
                   onChange={handleChange} 
-                  className="mt-1 block w-full rounded-md border-blue-200 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50 pl-1" 
+                  className="mt-1 block w-full rounded-md border-green-200 shadow-sm focus:border-green-400 focus:ring focus:ring-green-400 focus:ring-opacity-50 pl-1" 
                   required
                 />
                 <button 
                   type="button" 
-                  className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none focus:shadow-outline"
+                  className="ml-2 text-green-600 hover:text-green-800 focus:outline-none focus:shadow-outline"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? <EyeOff /> : <Eye />}
@@ -135,7 +135,7 @@ const SignUp = () => {
               {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
             </div>
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-blue-800 text-left">Confirm Password</label>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-green-800 text-left">Confirm Password</label>
               <div className="flex items-center">
                 <input 
                   id="confirmPassword" 
@@ -143,12 +143,12 @@ const SignUp = () => {
                   type={showConfirmPassword ? 'text' : 'password'} 
                   value={formData.confirmPassword} 
                   onChange={handleChange} 
-                  className="mt-1 block w-full rounded-md border-blue-200 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50 pl-1" 
+                  className="mt-1 block w-full rounded-md border-green-200 shadow-sm focus:border-green-400 focus:ring focus:ring-green-400 focus:ring-opacity-50 pl-1" 
                   required
                 />
                 <button 
                   type="button" 
-                  className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none focus:shadow-outline"
+                  className="ml-2 text-green-600 hover:text-green-800 focus:outline-none focus:shadow-outline"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 >
                   {showConfirmPassword ? <EyeOff /> : <Eye />}
@@ -158,16 +158,16 @@ const SignUp = () => {
             </div>
             <button 
               type="submit" 
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Create Account
             </button>
           </form>
         </div>
-        <div className="bg-blue-50 px-6 py-4 rounded-b-lg">
-          <p className="text-sm text-blue-600 text-center">
+        <div className="bg-green-50 px-6 py-4 rounded-b-lg">
+          <p className="text-sm text-green-600 text-center">
             Already have an account?{" "}
-            <button onClick={() => navigate('/login')} className="text-blue-600 font-semibold hover:underline">
+            <button onClick={() => navigate('/login')} className="text-green-600 font-semibold hover:underline">
               Log in
             </button>
           </p>

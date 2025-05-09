@@ -15,7 +15,7 @@ async function createAdmin() {
   const admin = new Admin({
     firstName: "Santhushie",
     lastName: "Nallaperuma",
-    email: "santhu@gmail.com",
+    email: "san@gmail.com",
     password: "admin123", // Consider hashing for production
     role: "admin"
   });
